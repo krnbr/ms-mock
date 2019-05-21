@@ -18,6 +18,7 @@ public class MockControllerV1 {
 
     @GetMapping("get")
     public String testGet(@RequestParam(required = false, defaultValue = "Hello World!") String message){
+        logger.info("API url, /mock/v1/get called, with message {} ",message);
         return message;
     }
 
